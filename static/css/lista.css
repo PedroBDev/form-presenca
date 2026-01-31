@@ -1,0 +1,13 @@
+body {
+    background: #f8f9fa;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}

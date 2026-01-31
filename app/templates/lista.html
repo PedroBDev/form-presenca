@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Confirmados</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lista.css') }}">
+</head>
+<body>
+
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Lista de Confirmados</h1>
+
+    {% if presencas %}
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Confirmação</th>
+                        <th>Quantidade</th>
+                        <th>Observação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in presencas %}
+                    <tr>
+                        <td>{{ p.nome or p["nome"] }}</td>
+                        <td>{{ p.telefone or p["telefone"] }}</td>
+                        <td>{{ p.confirmacao or p["confirmacao"] }}</td>
+                        <td>{{ p.quantidade or p["quantidade"] }}</td>
+                        <td>{{ p.observacao or p["observacao"] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p class="text-center">Nenhuma presença confirmada ainda.</p>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="/" class="btn btn-secondary">Voltar ao formulário</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.admin-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.admin-card h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.admin-card .form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.admin-card .btn {
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.admin-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
